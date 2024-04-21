@@ -1,1 +1,179 @@
-<!--Your HTML code here-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>IPL Website</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <a class="navbar-brand" href="https://wallpapercave.com/wp/wp6194569.jpg">IPL</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="points_table.html">Standings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Datamod.png">DataModel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('LOL1.jpg');">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Catch The Live Action!</h5>
+          <p>From 22 March to 26 May</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c402cf40757809.578c7ecde7ecd.jpg');">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Highlights</h5>
+          <p>Mumbai Indians Vs Chennai Super kings</p>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://d16f573ilcot6q.cloudfront.net/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-25-at-8.07.08-AM-1152x630.jpeg');">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Retention 2024<h5>
+          <p>All you need to know!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main role="main" class="container main">
+    <h1>Welcome to the IPL Website</h1>
+    <p>This is a prototype website for the Indian Premier League.</p>
+    <div class="gallery row">
+        <div class="col-md-4">
+          <a href="https://www.youtube.com/results?search_query=ipl+highlights+2024" target="_blank">
+            <img src="C:/Users/suhaa/Desktop/Website/High.jpg" alt="Gallery Image 1">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://www.iplt20.com/stats/2024" target="_blank">
+            <img src="C:/Users/suhaa/Desktop/Website/Stats.jpg" alt="Gallery Image 2">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="https://www.google.com/search?q=ipl+schedule+2024&sca_esv=2386da0e1e038e73&sca_upv=1&rlz=1C1PNFE_enUS1091US1092&sxsrf=ACQVn0_lKC7cbmhSXS54qrqWkdsI1fYCrA%3A1713723290045&ei=mlclZsqmAqnnkvQPxoOtuAQ&oq=Ipl+&gs_lp=Egxnd3Mtd2l6LXNlcnAiBElwbCAqAggCMgoQIxiABBgnGIoFMgQQIxgnMgoQIxiABBgnGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFMhAQABiABBixAxhDGIMBGIoFSIEYUABY0AVwAHgAkAEAmAGAAaABtgOqAQMxLjO4AQPIAQD4AQGYAgSgAv0DwgIQEC4YgAQYsQMYQxiDARiKBcICChAAGIAEGEMYigXCAhAQABiABBixAxiDARgUGIcCmAMAkgcDMC40oAfjKA&sclient=gws-wiz-serp#sie=lg;/g/11v0gsbybs;5;/m/03b_lm1;mt;fp;1;;;" target="_blank">
+            <img src="C:/Users/suhaa/Desktop/Website/Fix.jpg" alt="Gallery Image 3">
+          </a>
+        </div>
+      </div>
+    <!-- Upcoming Matches Section -->
+<div class="upcoming-matches container main" style="margin-top: 20px;">
+  <h2>Upcoming Matches</h2>
+  <div class="row">
+    <!-- Match 1 -->
+    <div class="col-md-3">
+      <div class="match-card" style="background: #006cb7; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+        <h5>MATCH 35 - Team1 vs Team2</h5>
+        <p>Date and Time</p>
+      </div>
+    </div>
+    <!-- Match 2 -->
+    <div class="col-md-3">
+      <div class="match-card" style="background: #009cde; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+        <h5>MATCH 36 - Team3 vs Team4</h5>
+        <p>Date and Time</p>
+      </div>
+    </div>
+    <!-- Match 3 -->
+    <div class="col-md-3">
+      <div class="match-card" style="background: #006cb7; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+        <h5>MATCH 37 - Team5 vs Team6</h5>
+        <p>Date and Time</p>
+      </div>
+    </div>
+    <!-- Match 4 -->
+    <div class="col-md-3">
+      <div class="match-card" style="background: #009cde; color: white; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+        <h5>MATCH 38 - Team7 vs Team8</h5>
+        <p>Date and Time</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+<style>
+  .container1 {
+      display: flex; /* Enables flex context for all its direct children */
+  }
+  .box {
+      width: 50%; /* Assigns equal width to each box */
+      padding: 10px; /* Optional: for some internal spacing */
+     
+  }
+</style>
+
+<div class="container1">
+  <div class="box"><form id="pollForm">
+    <h2>Team Win Prediction Poll</h2>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="team">Choose a team:</label>
+    <select id="team" name="team">
+        <option value="Team A">Team A</option>
+        <option value="Team B">Team B</option>
+    </select>
+    <button type="button" onclick="submitPoll()">Submit</button>
+    <button type="button" onclick="viewResponses1()">View Responses</button>
+</form></div>
+  <div class="box"><div id="responses"></div></div>
+</div>
+
+<canvas id="voteChart"></canvas>
+
+
+<script src="script.js"></script>
+<!--<script>
+    let responses = []; // Global variable to store email and team choice
+
+    function submitPoll() {
+        const email = document.getElementById('email').value;
+        const team = document.getElementById('team').value;
+        responses.push({email: email, team: team});
+        document.getElementById('pollForm').reset(); // Reset form after submission
+        alert('Thank you for your response!');
+    }
+
+    function viewResponses() {
+        const responseDiv = document.getElementById('responses');
+        responseDiv.innerHTML = ''; // Clear previous responses
+        responses.forEach(response => {
+            const p = document.createElement('p');
+            p.textContent = `Email: ${response.email}, Team: ${response.team}`;
+            responseDiv.appendChild(p);
+        });
+    }
+</script>-->
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <span>© 2024 IPL. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
