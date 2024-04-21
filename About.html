@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meet Our Team</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!--<header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+          <a class="navbar-brand" href="https://miro.medium.com/v2/resize:fit:1200/0*Xff7XxBqXVKXcqV0.jpg">IPL</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="points_table.html">Points Table</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+</header>    -->
+    <div class="team-section">
+        <h1 class="section-title">Meet Our Team</h1>
+        <div class="team-container">
+            <!-- Team Member 1 -->
+            <div class="team-member" onclick="showDetails('modal1')">
+                <img src="Suhaas.jpg" alt="Member 1">
+                <div class="member-info">
+                    <h3>Suhaas Gupta Nagaralla</h3>
+                    <p>Member 1 - Tampa</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/suhaas-gupta-nagaralla"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="showDetails('modal2')">
+                <img src="Va.jpeg" alt="Member 2">
+                <div class="member-info">
+                    <h3>Jyothi Vardhan Rao Metta</h3>
+                    <p>Member 2 - Tampa</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/jyothi-vardhana-rao-metta-515213193"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="showDetails('modal3')">
+                <img src="Rohan.jpg" alt="Member 3">
+                <div class="member-info">
+                    <h3>Rohan Patel</h3>
+                    <p>Member 3 - Tampa</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/rohan-patel-9958b618b/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-member" onclick="showDetails('modal4')">
+                <img src="Sankalp.jpg" alt="Member 4">
+                <div class="member-info">
+                    <h3>Sai Sankalp Thota</h3>
+                    <p>Member 4 - Tampa</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/sai-sankalp-thota-01982528a/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideDetails('modal1')">&times;</span>
+                    <p>Suhaas Gupta Nagaralla, a Forensic Data Analyst Associate at PwC, where I specialize in streamlining and enhancing data quality and efficiency with advanced tools such as Alteryx, Power BI, and SQL. My role involves meticulous data analysis and optimization, leading to significant improvements in data processing time and decision-making capabilities. With a robust academic background and currently pursuing a Master’s in Business Analytics at the University of South Florida, I am deeply committed to utilizing analytical insights to drive business transformations and solve complex data-related challenges effectively. My proactive approach and continuous learning mindset enable me to deliver high-quality, impactful data solutions in a dynamic business environment.</p>
+                </div>
+            </div>
+
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideDetails('modal2')">&times;</span>
+                    <p>Jyothi Vardhana Rao Metta, a Systems Engineer with a Master’s in Business Analytics from the University of South Florida, with 18 months of experience at Infosys. Skilled in AWS cloud technologies, he has improved data flow and security through efficient pipeline designs. Proficient in Python, Scala, and SQL, I have worked on various cloud-based projects, ensuring data integrity and implementing cost-effective solutions with enhanced runtime and productivity.</p>
+                </div>
+            </div>
+
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideDetails('modal3')">&times;</span>
+                    <p>A dynamic Senior Software Engineer with expertise in database management, software testing and automation, with 2 Years 9 months of experience at CapGemini Pvt Ltd. Currently pursuing a Master of Science in Business Analytics in USF, adding advanced data analytics skills to my substantial IT background. My work includes significant projects in predictive analytics and sports data analysis, utilizing his proficiency with modern data science tools.</p>
+                </div>
+            </div>
+
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideDetails('modal4')">&times;</span>
+                    <p>A Software Engineer with expertise in database management, Azure cloud technologies and DevOps, with 18 months of experience at Microsoft Pvt Ltd. Currently pursuing a Master of Science in Business Analytics and Information Systems at University of South Florida,enhancing my extensive IT expertise with strong data analytics skills. I use this expertise with current data science technologies for significant projects.</p>
+                </div>
+            </div>
+            <!-- More team members and modals can be added following the same pattern -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+      <span>© 2024 IPL. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
