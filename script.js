@@ -52,7 +52,7 @@ let responses = []; // Global variable to store email and team choice
             alert('Thank you for your response!');
         }
 
-     /*   function viewResponses() {
+        function viewResponses1() {
             const responseDiv = document.getElementById('responses');
             let voteCounts = {}; // Object to store vote counts
             
@@ -97,8 +97,8 @@ let responses = []; // Global variable to store email and team choice
                 responseDiv.appendChild(p);
             });
         }
-        */
-
+        
+/*
 
      function viewResponses1() {
             const responseDiv = document.getElementById('responses');
@@ -109,4 +109,4 @@ let responses = []; // Global variable to store email and team choice
                 responseDiv.appendChild(p);
             });
         }
-
+*/
