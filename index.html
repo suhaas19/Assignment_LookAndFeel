@@ -113,15 +113,39 @@
 
 <br>
 <br>
-<style>
+  <style>
   .container1 {
       display: flex; /* Enables flex context for all its direct children */
   }
   .box {
       width: 50%; /* Assigns equal width to each box */
       padding: 10px; /* Optional: for some internal spacing */
-     
+
   }
+  .response-container {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.delete-response {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 0 5px;
+    cursor: pointer;
+}
+
+.delete-response:hover {
+    opacity: 0.8;
+}
+
 </style>
 
 <div class="container1">
@@ -143,28 +167,133 @@
 <canvas id="voteChart"></canvas>
 
 
-<script src="script.js"></script>
-<!--<script>
-    let responses = []; // Global variable to store email and team choice
+<script src="~/js/script.js"></script>
 
-    function submitPoll() {
-        const email = document.getElementById('email').value;
-        const team = document.getElementById('team').value;
-        responses.push({email: email, team: team});
-        document.getElementById('pollForm').reset(); // Reset form after submission
-        alert('Thank you for your response!');
+    <div class="container">
+        <h2 class="title">What's your opinion about this page?</h2>
+        <div class="input-group">
+            <input type="text" id="opinionInput" class="input-text" placeholder="Enter your opinion here">
+            <button class="btn" onclick="addOrUpdateOpinion()">Submit Opinion</button>
+        </div>
+        <ul id="opinionsList" class="opinion-list"></ul>
+    </div>
+    <style>
+
+.input-text {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 25%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.opinion-list {
+    list-style: none;
+    padding: 0;
+}
+
+.opinion-list li {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.opinion-list li input[type="text"] {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 8px;
+}
+
+.opinion-list li .btn {
+    padding: 8px 12px;
+    width: auto;
+}
+
+.opinion-list li .btn-edit, .opinion-list li .btn-delete {
+    background-color: #FFC107;
+}
+
+.opinion-list li .btn-delete {
+    background-color: #DC3545;
+}
+    </style>
+    <script>// script.js
+let opinions = [];
+let currentlyEditingIndex = -1;
+
+function addOrUpdateOpinion() {
+    const input = document.getElementById('opinionInput');
+    if (input.value.trim() === '') return;
+
+    if (currentlyEditingIndex === -1) {
+        // Add new opinion
+        opinions.push(input.value);
+    } else {
+        // Update existing opinion
+        opinions[currentlyEditingIndex] = input.value;
+        currentlyEditingIndex = -1;
     }
 
-    function viewResponses() {
-        const responseDiv = document.getElementById('responses');
-        responseDiv.innerHTML = ''; // Clear previous responses
-        responses.forEach(response => {
-            const p = document.createElement('p');
-            p.textContent = `Email: ${response.email}, Team: ${response.team}`;
-            responseDiv.appendChild(p);
-        });
-    }
-</script>-->
+    input.value = '';  // Clear input after adding or updating
+    updateOpinionsList();
+}
+
+function updateOpinionsList() {
+    const list = document.getElementById('opinionsList');
+    list.innerHTML = '';  // Clear current list
+    opinions.forEach((opinion, index) => {
+        const listItem = document.createElement('li');
+        const textInput = document.createElement('input');
+        textInput.type = 'text';
+        textInput.value = opinion;
+        textInput.disabled = true;
+
+        const editButton = document.createElement('button');
+        editButton.textContent = 'Edit';
+        editButton.onclick = () => editOpinion(index, textInput);
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.onclick = () => deleteOpinion(index);
+
+        listItem.appendChild(textInput);
+        listItem.appendChild(editButton);
+        listItem.appendChild(deleteButton);
+
+        list.appendChild(listItem);
+    });
+}
+
+function editOpinion(index, textInput) {
+    currentlyEditingIndex = index;
+    const input = document.getElementById('opinionInput');
+    input.value = opinions[index];
+    textInput.disabled = false;
+    input.focus();
+}
+
+function deleteOpinion(index) {
+    opinions.splice(index, 1);
+    updateOpinionsList();
+}
+</script>
   </main>
   <footer class="footer">
     <div class="container">
