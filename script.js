@@ -99,12 +99,35 @@ let responses = []; // Global variable to store email and team choice
         }
         */
 
-        function viewResponses1() {
-            const responseDiv = document.getElementById('responses');
-            responseDiv.innerHTML = ''; // Clear previous responses
-            responses.forEach(response => {
-                const p = document.createElement('p');
-                p.textContent = `Email: ${response.email}, Team: ${response.team}`;
-                responseDiv.appendChild(p);
-            });
-        }
+
+function viewResponses1() {
+    const responseDiv = document.getElementById('responses');
+    responseDiv.innerHTML = ''; // Clear previous responses
+
+    responses.forEach((response, index) => {
+        const responseContainer = document.createElement('div');
+        responseContainer.className = 'response-container';
+
+        const p = document.createElement('p');
+        p.textContent = `Email: ${response.email}, Team: ${response.team}`;
+
+        // Create delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = 'X'; // Text for the button
+        deleteBtn.className = 'delete-response';
+        deleteBtn.onclick = function () {
+            // Remove response from the array
+            responses.splice(index, 1);
+            // Update the display
+            viewResponses1();
+        };
+
+        // Append paragraph and delete button to the container
+        responseContainer.appendChild(p);
+        responseContainer.appendChild(deleteBtn);
+
+        // Append the container to the responseDiv
+        responseDiv.appendChild(responseContainer);
+    });
+}
+
